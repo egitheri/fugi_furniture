@@ -9,6 +9,14 @@ class ProductDetail extends StatefulWidget {
 }
 
 class _ProductDetailState extends State<ProductDetail> {
+  TextEditingController qty = TextEditingController(text: '2');
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +33,9 @@ class _ProductDetailState extends State<ProductDetail> {
         elevation: 0.0,
         centerTitle: true,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: Icon(
             Icons.arrow_back,
             color: Colors.black,
@@ -65,7 +75,7 @@ class _ProductDetailState extends State<ProductDetail> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            height: 500,
+            height: 400,
             decoration: BoxDecoration(
               color: Colors.red,
               image: DecorationImage(
@@ -129,10 +139,18 @@ class _ProductDetailState extends State<ProductDetail> {
                       )
                     ],
                   ),
+                  SizedBox(
+                    height: 12,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Choose a color :'),
+                      Text(
+                        'Choose a color :',
+                        style: TextStyle(
+                            color: Color(0xff7A8D9C),
+                            fontFamily: GoogleFonts.poppins().fontFamily),
+                      ),
                       Row(
                         children: [
                           CircleAvatar(
@@ -171,7 +189,104 @@ class _ProductDetailState extends State<ProductDetail> {
                         ],
                       )
                     ],
-                  )
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Select Quality',
+                        style: TextStyle(
+                            color: Color(0xff7A8D9C),
+                            fontFamily: GoogleFonts.poppins().fontFamily),
+                      ),
+                      Row(
+                        children: [
+                          Container(
+                            width: 30,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                  width: 1, color: Color(0xffEAEBEC)),
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(18),
+                                bottomLeft: Radius.circular(18),
+                              ),
+                              color: Color(0xffFCFCFC),
+                            ),
+                            child: Center(
+                              child: Icon(Icons.remove),
+                            ),
+                          ),
+                          Container(
+                            width: 30,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                  width: 1, color: Color(0xffEAEBEC)),
+                              color: Color(0xffFCFCFC),
+                            ),
+                            child: TextFormField(
+                              textAlign: TextAlign.center,
+                              controller: qty,
+                            ),
+                          ),
+                          Container(
+                            width: 30,
+                            height: 30,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                  width: 1, color: Color(0xffEAEBEC)),
+                              borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(18),
+                                bottomRight: Radius.circular(18),
+                              ),
+                              color: Color(0xffFCFCFC),
+                            ),
+                            child: Center(
+                              child: Icon(Icons.add),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  Wrap(
+                    children: [
+                      Text(
+                        'Curabitur commodo turpis id placerat mattis. Mauris euismod arcu id orci fringilla sodales. Proin congue eleifend ipsum, eleifend porttitor mi ullamcorper.',
+                        style: TextStyle(
+                            color: Color(0xffADADAD),
+                            fontFamily: GoogleFonts.poppins().fontFamily),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        elevation: 0.0,
+                        shadowColor: Colors.transparent,
+                        shape: StadiumBorder(),
+                        backgroundColor: Color(0xff9A9390),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        'Add To Cart',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontFamily: GoogleFonts.poppins().fontFamily),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),

@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final double itemHeight = (size.height - kToolbarHeight - 250) / 2;
     final double itemWidth = size.width / 2;
     return Scaffold(
-        backgroundColor: Color(0xffF8F8F8),
+        backgroundColor: const Color(0xffF8F8F8),
         appBar: AppBar(
           title: Text(
             "Home",
@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.black,
                 fontFamily: GoogleFonts.poppins().fontFamily),
           ),
-          backgroundColor: Color(0xffF8F8F8),
+          backgroundColor: const Color(0xffF8F8F8),
           elevation: 0,
           centerTitle: true,
           leading: IconButton(
@@ -161,7 +161,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         bottomNavigationBar: Container(
           height: 60,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.white,
           ),
           child: Row(
@@ -172,7 +172,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 42,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(14),
-                    color: Color(0xff9A9390)),
+                    color: const Color(0xff9A9390)),
                 child: Image.asset(
                   'assets/icons/home.png',
                 ),
@@ -212,24 +212,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ],
           ),
-        )
-        // BottomNavigationBar(
-        //   items: const <BottomNavigationBarItem>[
-        //     BottomNavigationBarItem(
-        //       icon: IconButton(
-        //         onPressed: () {},
-        //         icon: Icon(Icons.home),
-        //       ),
-        //       label: 'Home',
-        //     ),
-        //     BottomNavigationBarItem(
-        //       icon: Icon(Icons.home),
-        //       label: 'Profil',
-        //     ),
-        //   ],
-        //   showSelectedLabels: false,
-        //   showUnselectedLabels: false,
-        // ),
-        );
+        ));
   }
 }

@@ -20,7 +20,7 @@ class _ProductDetailState extends State<ProductDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF8F8F8),
+      backgroundColor: const Color(0xffF8F8F8),
       appBar: AppBar(
         title: Text(
           "Detail",
@@ -36,7 +36,7 @@ class _ProductDetailState extends State<ProductDetail> {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
             color: Colors.black,
           ),
@@ -45,20 +45,20 @@ class _ProductDetailState extends State<ProductDetail> {
           Row(
             children: [
               Container(
-                margin: EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
                 width: 34,
                 height: 34,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.white),
-                child: Icon(
+                child: const Icon(
                   Icons.favorite_border_rounded,
                   color: Color(0xffEE3127),
                 ),
               ),
               IconButton(
                 onPressed: () {},
-                icon: Icon(
+                icon: const Icon(
                   Icons.share,
                   color: Colors.black,
                 ),
@@ -76,7 +76,7 @@ class _ProductDetailState extends State<ProductDetail> {
         children: [
           Container(
             height: 400,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.red,
               image: DecorationImage(
                   image: AssetImage('assets/images/detail.png'),
@@ -85,9 +85,9 @@ class _ProductDetailState extends State<ProductDetail> {
           ),
           Expanded(
             child: Container(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               transform: Matrix4.translationValues(0.0, -30, 0),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(40),
@@ -104,19 +104,19 @@ class _ProductDetailState extends State<ProductDetail> {
                         style: TextStyle(
                             fontSize: 22,
                             fontFamily: GoogleFonts.poppins().fontFamily,
-                            color: Color(0xff4A4543)),
+                            color: const Color(0xff4A4543)),
                       ),
                       Text(
                         '\$240',
                         style: TextStyle(
                             fontSize: 26,
                             fontFamily: GoogleFonts.poppins().fontFamily,
-                            color: Color(0xff9A9390)),
+                            color: const Color(0xff9A9390)),
                       ),
                     ],
                   ),
                   Row(
-                    children: [
+                    children: const [
                       Icon(
                         Icons.star,
                         color: Colors.yellow,
@@ -139,7 +139,7 @@ class _ProductDetailState extends State<ProductDetail> {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
                   Row(
@@ -148,11 +148,11 @@ class _ProductDetailState extends State<ProductDetail> {
                       Text(
                         'Choose a color :',
                         style: TextStyle(
-                            color: Color(0xff7A8D9C),
+                            color: const Color(0xff7A8D9C),
                             fontFamily: GoogleFonts.poppins().fontFamily),
                       ),
                       Row(
-                        children: [
+                        children: const [
                           CircleAvatar(
                             radius: 12,
                             backgroundColor: Color(0xff9A9390),
@@ -190,7 +190,7 @@ class _ProductDetailState extends State<ProductDetail> {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
                   Row(
@@ -199,7 +199,7 @@ class _ProductDetailState extends State<ProductDetail> {
                       Text(
                         'Select Quality',
                         style: TextStyle(
-                            color: Color(0xff7A8D9C),
+                            color: const Color(0xff7A8D9C),
                             fontFamily: GoogleFonts.poppins().fontFamily),
                       ),
                       Row(
@@ -209,14 +209,14 @@ class _ProductDetailState extends State<ProductDetail> {
                             height: 30,
                             decoration: BoxDecoration(
                               border: Border.all(
-                                  width: 1, color: Color(0xffEAEBEC)),
-                              borderRadius: BorderRadius.only(
+                                  width: 1, color: const Color(0xffEAEBEC)),
+                              borderRadius: const BorderRadius.only(
                                 topLeft: Radius.circular(18),
                                 bottomLeft: Radius.circular(18),
                               ),
-                              color: Color(0xffFCFCFC),
+                              color: const Color(0xffFCFCFC),
                             ),
-                            child: Center(
+                            child: const Center(
                               child: Icon(Icons.remove),
                             ),
                           ),
@@ -225,8 +225,8 @@ class _ProductDetailState extends State<ProductDetail> {
                             height: 30,
                             decoration: BoxDecoration(
                               border: Border.all(
-                                  width: 1, color: Color(0xffEAEBEC)),
-                              color: Color(0xffFCFCFC),
+                                  width: 1, color: const Color(0xffEAEBEC)),
+                              color: const Color(0xffFCFCFC),
                             ),
                             child: TextFormField(
                               textAlign: TextAlign.center,
@@ -238,14 +238,14 @@ class _ProductDetailState extends State<ProductDetail> {
                             height: 30,
                             decoration: BoxDecoration(
                               border: Border.all(
-                                  width: 1, color: Color(0xffEAEBEC)),
-                              borderRadius: BorderRadius.only(
+                                  width: 1, color: const Color(0xffEAEBEC)),
+                              borderRadius: const BorderRadius.only(
                                 topRight: Radius.circular(18),
                                 bottomRight: Radius.circular(18),
                               ),
-                              color: Color(0xffFCFCFC),
+                              color: const Color(0xffFCFCFC),
                             ),
-                            child: Center(
+                            child: const Center(
                               child: Icon(Icons.add),
                             ),
                           ),
@@ -253,7 +253,7 @@ class _ProductDetailState extends State<ProductDetail> {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
                   Wrap(
@@ -261,12 +261,12 @@ class _ProductDetailState extends State<ProductDetail> {
                       Text(
                         'Curabitur commodo turpis id placerat mattis. Mauris euismod arcu id orci fringilla sodales. Proin congue eleifend ipsum, eleifend porttitor mi ullamcorper.',
                         style: TextStyle(
-                            color: Color(0xffADADAD),
+                            color: const Color(0xffADADAD),
                             fontFamily: GoogleFonts.poppins().fontFamily),
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
                   SizedBox(
@@ -275,8 +275,8 @@ class _ProductDetailState extends State<ProductDetail> {
                       style: ElevatedButton.styleFrom(
                         elevation: 0.0,
                         shadowColor: Colors.transparent,
-                        shape: StadiumBorder(),
-                        backgroundColor: Color(0xff9A9390),
+                        shape: const StadiumBorder(),
+                        backgroundColor: const Color(0xff9A9390),
                       ),
                       onPressed: () {},
                       child: Text(

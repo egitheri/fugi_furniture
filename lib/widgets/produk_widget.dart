@@ -45,18 +45,18 @@ class ProdukWidget extends StatelessWidget {
                             image: AssetImage('assets/images/${image}'),
                             fit: BoxFit.cover),
                         color: Colors.red,
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                             topRight: Radius.circular(20),
                             topLeft: Radius.circular(20))),
                   ),
                   Container(
-                    margin: EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(10),
                     width: 34,
                     height: 34,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.white),
-                    child: Icon(
+                    child: const Icon(
                       Icons.favorite_border_rounded,
                       color: Color(0xffEE3127),
                     ),
@@ -64,13 +64,13 @@ class ProdukWidget extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   width: 12,
                 ),
                 Text(
@@ -78,11 +78,11 @@ class ProdukWidget extends StatelessWidget {
                   style: TextStyle(
                       fontFamily: GoogleFonts.poppins().fontFamily,
                       fontSize: 14,
-                      color: Color(0xff4A4543)),
+                      color: const Color(0xff4A4543)),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
             Row(
@@ -90,33 +90,34 @@ class ProdukWidget extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 12,
                     ),
                     Text(
                       price,
-                      style: TextStyle(fontSize: 20, color: Color(0xff9A9390)),
+                      style: const TextStyle(
+                          fontSize: 20, color: Color(0xff9A9390)),
                     ),
                   ],
                 ),
                 Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.star,
                       color: Color(0xffEEA427),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 8,
                     ),
                     Text(rating),
-                    SizedBox(
+                    const SizedBox(
                       width: 12,
                     )
                   ],
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
           ],

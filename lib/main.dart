@@ -39,15 +39,16 @@ class _MyHomePageState extends State<MyHomePage> {
     final double itemHeight = (size.height - kToolbarHeight - 250) / 2;
     final double itemWidth = size.width / 2;
     return Scaffold(
-        backgroundColor: Color(0xffF2F2F2),
+        backgroundColor: Color(0xffF8F8F8),
         appBar: AppBar(
           title: Text(
             "Home",
             style: TextStyle(
+                fontSize: 16,
                 color: Colors.black,
                 fontFamily: GoogleFonts.poppins().fontFamily),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: Color(0xffF8F8F8),
           elevation: 0,
           centerTitle: true,
           leading: IconButton(
@@ -81,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               const SizedBox(
-                height: 12,
+                height: 18,
               ),
               SizedBox(
                 width: MediaQuery.of(context).size.width,
@@ -113,13 +114,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               const SizedBox(
-                height: 12,
+                height: 18,
               ),
               Text(
                 'Recommended Furnitures',
                 style: TextStyle(
                     fontFamily: GoogleFonts.poppins().fontFamily,
-                    fontWeight: FontWeight.w500),
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16),
               ),
               const SizedBox(
                 height: 12,
